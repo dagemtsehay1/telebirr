@@ -166,7 +166,7 @@ class HomePage extends StatelessWidget {
               label: "home"),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.map,
+                Icons.explore_outlined,
                 color: Colors.blue,
               ),
               label: "home"),
