@@ -9,6 +9,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final myLists = [
+      [Icons.more, "Deposite Cash"],
+      [Icons.home, "Financial Service"]
+    ];
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -103,8 +107,82 @@ class HomePage extends StatelessWidget {
               ],
             ),
             HorizontalScroolView(),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Favourite Links"),
+                  Text(
+                    "See All",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+                height: 200,
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    ListTile(
+                      leading: Icon(Icons.menu),
+                      title: Text("Deposite Cash"),
+                      trailing: Icon(Icons.arrow_forward_ios),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.menu),
+                      title: Text("Deposite Cash"),
+                      trailing: Icon(Icons.arrow_forward_ios),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.menu),
+                      title: Text("Deposite Cash"),
+                      trailing: Icon(Icons.arrow_forward_ios),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.menu),
+                      title: Text("Deposite Cash"),
+                      trailing: Icon(Icons.arrow_forward_ios),
+                    ),
+                  ],
+                ))
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.orange,
+              ),
+              label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.card_giftcard,
+                color: Colors.blue,
+              ),
+              label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.map,
+                color: Colors.blue,
+              ),
+              label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person_outline,
+                color: Colors.blue,
+              ),
+              label: "home"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.blue,
+              ),
+              label: "home"),
+        ],
       ),
     );
   }
